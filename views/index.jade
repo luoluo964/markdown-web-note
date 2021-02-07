@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="content")
+    h1(class="subject")= subject
+    ul 
+      -for(var i=1;i<=titleList.length;i++) 
+        li(style="width:200px")
+          //- 超链接中用get方式请求，将文章名作为参数
+          a(href="content/?"+"article="+titleList[i-1])
+            span(class="link")= titleList[i-1]
+ 
